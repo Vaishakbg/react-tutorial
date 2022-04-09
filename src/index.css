@@ -11,6 +11,7 @@ body {
 
 .book-list{
     display: flex;
+    align-items: flex-start;
 }
 .book {
 
@@ -19,14 +20,20 @@ width: 300px;
 max-width: 90vw;
 margin: 10px;
 padding: 10px;
-border-radius: 5px;
+border-radius: 10px;
 }
 .book-title {
     font-size: 1rem;
     margin: 10px 0;
 }
 .author {
-    font-size: .75rem;
+    font-size: .6rem;
     color: #07799f;
     font-weight: 700;
+}
+.book p {
+    font-size: 0.7rem;
+}
+.book img{
+    max-width: 200px;
 }
