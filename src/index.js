@@ -6,21 +6,19 @@ const books = [
   {
     id: 1,
     img: "https://images-na.ssl-images-amazon.com/images/I/81WZ6QvGZ2L._AC_UL604_SR604,400_.jpg",
-    title: "It's Not Easy Being a Bunny (Beginner Books(R))",
+    title: "It's Not Easy Being a Bunny",
     author: "Marilyn Sadler",
   },
   {
     id: 2,
     img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL604_SR604,400_.jpg",
-    title:
-      "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+    title: "Atomic Habits",
     author: "James Clear",
   },
   {
     id: 3,
     img: "https://images-na.ssl-images-amazon.com/images/I/81DSi4ECwyL._AC_UL604_SR604,400_.jpg",
-    title:
-      "The Mothers and Daughters of the Bible Speak: Lessons on Faith from Nine Biblical Families",
+    title: "The Mothers and Daughters of the Bible Speak",
     author: "Shannon Bream",
   },
 ];
@@ -39,12 +37,35 @@ function BookList() {
 }
 
 const Book = (props) => {
+  // attribute, eventHandler
+  // onclick, OnMouseOver
+  const clickHandler = (e) => {
+    console.log(e.target);
+  };
+
+  const complexExample = (author) => {
+    console.log(author);
+  };
+
   const { img, title, author } = props;
   return (
-    <article className="book">
+    <article
+      className="book"
+      onMouseOver={() => {
+        console.log(author);
+      }}
+    >
       <img src={img} alt="book" />
       <h2 className="book-title">{title}</h2>
-      <span className="author">{author.toUpperCase()}</span>
+      <span className="author" style={{ display: "block" }}>
+        {author.toUpperCase()}
+      </span>
+      <button type="button" onClick={clickHandler}>
+        button
+      </button>
+      <button type="button" onClick={() => complexExample(author)}>
+        Complex
+      </button>
     </article>
   );
 };
