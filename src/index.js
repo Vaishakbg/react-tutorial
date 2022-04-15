@@ -1,26 +1,11 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import Book from "./Book";
-import { Greeting } from "./testing/testing";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
 
-import { books } from "./books";
-
-import "./index.css";
-
-function BookList() {
-  console.log(Greeting);
-  return (
-    <section className="book-list">
-      {/* {books.map((book) => {
-        return <Book key={book.id} book={book} />;
-      })} */}
-      {books.map((book) => {
-        return <Book key={book.id} {...book} />;
-      })}
-    </section>
-  );
-}
-
-const container = document.getElementById("root");
-const root = createRoot(container);
-root.render(<BookList />);
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
