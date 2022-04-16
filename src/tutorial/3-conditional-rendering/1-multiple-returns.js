@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-const url = 'https://api.github.com/users/QuincyLarson';
+import React, { useState, useEffect } from "react";
+const url = "https://api.github.com/users/QuincyLarson";
 const MultipleReturns = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  const [user, setUser] = useState('default user');
+  const [user, setUser] = useState("default user");
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(url)
       .then((resp) => {
         if (resp.status >= 200 && resp.status <= 299) {
@@ -34,7 +35,7 @@ const MultipleReturns = () => {
   if (isError) {
     return (
       <div>
-        <h1>Error....</h1>
+        <h1>Error...</h1>
       </div>
     );
   }
