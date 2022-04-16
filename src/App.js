@@ -1,9 +1,9 @@
 import React from "react";
-import MultipleReturns from "./tutorial/3-conditional-rendering/1-multiple-returns";
+import ShortCircuit from "./tutorial/3-conditional-rendering/2-short-circuit";
 function App() {
   return (
     <div className="container">
-      <MultipleReturns />
+      <ShortCircuit />
     </div>
   );
 }
