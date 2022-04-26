@@ -1,9 +1,9 @@
 import React from "react";
-import UseReducer from "./tutorial/6-useReducer";
+import PropDrilling from "./tutorial/7-prop-drilling/1-prop-drilling";
 function App() {
   return (
     <div className="container">
-      <UseReducer />
+      <PropDrilling />
     </div>
   );
 }
