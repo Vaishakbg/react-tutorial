@@ -1,9 +1,9 @@
 import React from "react";
-import ContextAPI from "./tutorial/8-useContext/1-context-api";
+import Setup from "./tutorial/9-custom-hooks/1-fetch-example";
 function App() {
   return (
     <div className="container">
-      <ContextAPI />
+      <Setup />
     </div>
   );
 }
